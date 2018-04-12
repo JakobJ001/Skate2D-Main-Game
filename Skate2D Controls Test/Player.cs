@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 
 namespace Skate2D_Controls_Test
 {
+    //---Hela klassen är Jakobs Del
+
     //NOTES:
 
     //02-22:
@@ -33,9 +35,8 @@ namespace Skate2D_Controls_Test
 
         public void Update()
         {
-    
+            //--- These are the 
             velocity += Game1.gravity;
-
             position += velocity;
 
             if (Keyboard.GetState().IsKeyDown(Keys.Space))

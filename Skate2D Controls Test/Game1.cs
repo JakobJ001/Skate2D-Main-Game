@@ -34,17 +34,20 @@ namespace Skate2D_Controls_Test
 
         protected override void Initialize()
         {
+
+
             IsMouseVisible = true;
             graphics.PreferredBackBufferHeight = 800;
             graphics.PreferredBackBufferWidth = 1200;
             graphics.ApplyChanges();
 
+            //---This is simply gravity, makes it so everything that has velocity is slowly pulled downwards --Jakobs Del
             gravity = new Vector2(0, 0.4f);
 
             currentGameState = GameStates.StartScreen;
 
+            //---These are the variables that are used for the background sprite --Simons Del
             ScreenHeight = graphics.PreferredBackBufferHeight;
-
             ScreenWidth = graphics.PreferredBackBufferWidth;
 
             base.Initialize();
@@ -53,6 +56,9 @@ namespace Skate2D_Controls_Test
         
         protected override void LoadContent()
         {
+            //--- spriteBatch is loaded here to draw the player and the background, the camera and the
+            // actuall player and all its controls are loaded aswell --Jakobs Del
+
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             camera = new Camera();
@@ -62,6 +68,8 @@ namespace Skate2D_Controls_Test
             backgroundSprite = Content.Load<Texture2D>("background");
 
             player = new Player(playerSprite);
+
+            //-----------------------------------------------------------------------------------------
 
         }
 
@@ -73,11 +81,15 @@ namespace Skate2D_Controls_Test
 
         protected override void Update(GameTime gameTime)
         {
+
+            //--- Makes it so pressing escape closes the game, this wouldnt be in the final product it just makes it easier when coding --Jakobs Del
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
+            //--- camera.Follow calls on the Camera object to use its Follow method, which simply makes camera follow whatever you tell it to --Simons Del
             camera.Follow(player);
 
+            //--- Uses the Player objects update method, which checks for button presses and does what they are bound to, like move forward and jump --Jakobs Del
             player.Update();
 
             base.Update(gameTime);
@@ -87,6 +99,7 @@ namespace Skate2D_Controls_Test
         {
             GraphicsDevice.Clear(Color.Red);
 
+            //--Starts Sprite Batch to draw everything thats needed, like the background wallpaper and the player sprite --Jakobs Del
                 spriteBatch.Begin(transformMatrix: camera.Transform);
                 player.Draw(spriteBatch);
                 spriteBatch.Draw(backgroundSprite, new Vector2(0), Color.White);

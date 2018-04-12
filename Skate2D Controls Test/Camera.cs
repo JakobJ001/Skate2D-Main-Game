@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Skate2D_Controls_Test
 {
+
+    //--Hela klassen är Simons Del
+
         public class Camera
         {
             public Matrix Transform { get; private set; }
