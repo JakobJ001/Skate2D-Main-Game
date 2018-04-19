@@ -101,8 +101,13 @@ namespace Skate2D_Controls_Test
 
             //--Starts Sprite Batch to draw everything thats needed, like the background wallpaper and the player sprite --Jakobs Del
                 spriteBatch.Begin(transformMatrix: camera.Transform);
-                player.Draw(spriteBatch);
-                spriteBatch.Draw(backgroundSprite, new Vector2(0), Color.White);
+            spriteBatch.Draw(backgroundSprite, new Vector2(-500,-100), Color.White);
+            for(int i = 1; i < 10000;)
+            {
+                spriteBatch.Draw(backgroundSprite, new Vector2(-500+backgroundSprite.Width*i, -100), Color.White);
+                i++;
+            }
+            player.Draw(spriteBatch);
                 spriteBatch.End();
 
                 base.Draw(gameTime);
