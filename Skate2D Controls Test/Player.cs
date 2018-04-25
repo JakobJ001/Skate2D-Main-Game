@@ -38,11 +38,13 @@ namespace Skate2D_Controls_Test
             //--- These are the two vektors related to the player, and is what changes if the player moves. 
             velocity += Game1.gravity;
             position += velocity;
+            int JumpTime = 1;
 
             //--- Space A and D are assigned to be basic movements, moving right and left and jumping
-            if (Keyboard.GetState().IsKeyDown(Keys.Space))
+            if (Keyboard.GetState().IsKeyDown(Keys.Space) && JumpTime < 2)
             {
                 velocity.Y = -3;
+                JumpTime++;
             }
 
             if (Keyboard.GetState().IsKeyDown(Keys.A))
