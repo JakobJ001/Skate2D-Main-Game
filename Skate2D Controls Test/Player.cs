@@ -30,7 +30,7 @@ namespace Skate2D_Controls_Test
         {
             this.texture = texture;
             position = new Vector2(50, 100);
-            velocity = new Vector2(1, -5);
+            velocity = new Vector2(0, 0);
         }
 
         public void Update()
@@ -49,23 +49,23 @@ namespace Skate2D_Controls_Test
 
             if (Keyboard.GetState().IsKeyDown(Keys.A))
             {
-                velocity.X = -10;
+                velocity.X = -20;
             }
 
             if (Keyboard.GetState().IsKeyDown(Keys.D))
             { 
-                    velocity.X = 100;
+                    velocity.X = 20;
 
             }
 
             //--- S and D are assigned to rotate the character, so that in the final game you can do flips in the air for extra points.
-            if (Keyboard.GetState().IsKeyDown(Keys.S))
+            if (Keyboard.GetState().IsKeyDown(Keys.E))
             {
                     rotation += MathHelper.ToRadians(10);
             }
 
 
-            if (Keyboard.GetState().IsKeyDown(Keys.W))
+            if (Keyboard.GetState().IsKeyDown(Keys.Q))
             {
                     rotation -= MathHelper.ToRadians(10);
             }

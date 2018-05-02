@@ -13,6 +13,9 @@ namespace Skate2D_Controls_Test
 
         Camera camera;
 
+        //-----------------------------------------------
+        Obstacles box;
+
         public static int ScreenHeight;
         public static int ScreenWidth;
 
@@ -21,6 +24,7 @@ namespace Skate2D_Controls_Test
         public static Vector2 gravity;
 
         GraphicsDeviceManager graphics;
+        //-----------------------------------------------
         SpriteBatch spriteBatch;
 
         Texture2D backgroundSprite;
@@ -59,6 +63,7 @@ namespace Skate2D_Controls_Test
             //--- spriteBatch is loaded here to draw the player and the background, the camera and the
             // actuall player and all its controls are loaded aswell --Jakobs Del
 
+            //-----------------------------------------------
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             camera = new Camera();
@@ -67,9 +72,13 @@ namespace Skate2D_Controls_Test
 
             backgroundSprite = Content.Load<Texture2D>("background");
 
+            Texture2D boxTexture = Content.Load<Texture2D>("box");
+
             player = new Player(playerSprite);
 
+
             //-----------------------------------------------------------------------------------------
+            box = new Obstacles(boxTexture);
 
         }
 
@@ -100,14 +109,18 @@ namespace Skate2D_Controls_Test
             GraphicsDevice.Clear(Color.Red);
 
             //--Starts Sprite Batch to draw everything thats needed, like the background wallpaper and the player sprite --Jakobs Del
-                spriteBatch.Begin(transformMatrix: camera.Transform);
+            spriteBatch.Begin(transformMatrix: camera.Transform);
             spriteBatch.Draw(backgroundSprite, new Vector2(-500,-100), Color.White);
-            for(int i = 1; i < 10000;)
+            for (int i = 1; i < 10000;)
             {
-                spriteBatch.Draw(backgroundSprite, new Vector2(-500+backgroundSprite.Width*i, -100), Color.White);
+                spriteBatch.Draw(backgroundSprite, new Vector2(-500 + backgroundSprite.Width * i, -100), Color.White);
                 i++;
             }
             player.Draw(spriteBatch);
+
+            //------------------------------------------------------------
+            box.Draw(spriteBatch);
+
                 spriteBatch.End();
 
                 base.Draw(gameTime);

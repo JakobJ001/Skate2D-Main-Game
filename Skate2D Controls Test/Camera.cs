@@ -23,7 +23,7 @@ namespace Skate2D_Controls_Test
 
                 var offset = Matrix.CreateTranslation(
                     Game1.ScreenWidth / 2,
-                    Game1.ScreenHeight / 9 ,
+                    Game1.ScreenHeight / 9,
                     0);
                 Transform = position * offset;
             }
