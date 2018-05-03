@@ -1,0 +1,25 @@
+C:\Users\arvid.nilsson7\Documents\Visual Studio Project\WIP\Skate2D\Skate2D Controls Test\bin\Windows\x86\Debug\Content\background.xnb
+C:\Users\arvid.nilsson7\Documents\Visual Studio Project\WIP\Skate2D\Skate2D Controls Test\bin\Windows\x86\Debug\Content\flappybird.xnb
+C:\Users\arvid.nilsson7\Documents\Visual Studio Project\WIP\Skate2D\Skate2D Controls Test\bin\Windows\x86\Debug\Skate2D Controls Test.exe
+C:\Users\arvid.nilsson7\Documents\Visual Studio Project\WIP\Skate2D\Skate2D Controls Test\bin\Windows\x86\Debug\Skate2D Controls Test.pdb
+C:\Users\arvid.nilsson7\Documents\Visual Studio Project\WIP\Skate2D\Skate2D Controls Test\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\arvid.nilsson7\Documents\Visual Studio Project\WIP\Skate2D\Skate2D Controls Test\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\arvid.nilsson7\Documents\Visual Studio Project\WIP\Skate2D\Skate2D Controls Test\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\arvid.nilsson7\Documents\Visual Studio Project\WIP\Skate2D\Skate2D Controls Test\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\arvid.nilsson7\Documents\Visual Studio Project\WIP\Skate2D\Skate2D Controls Test\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\arvid.nilsson7\Documents\Visual Studio Project\WIP\Skate2D\Skate2D Controls Test\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\arvid.nilsson7\Documents\Visual Studio Project\WIP\Skate2D\Skate2D Controls Test\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\arvid.nilsson7\Documents\Visual Studio Project\WIP\Skate2D\Skate2D Controls Test\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\arvid.nilsson7\Documents\Visual Studio Project\WIP\Skate2D\Skate2D Controls Test\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+C:\Users\arvid.nilsson7\Documents\Visual Studio Project\WIP\Skate2D\Skate2D Controls Test\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\arvid.nilsson7\Documents\Visual Studio Project\WIP\Skate2D\Skate2D Controls Test\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\arvid.nilsson7\Documents\Visual Studio Project\WIP\Skate2D\Skate2D Controls Test\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\arvid.nilsson7\Documents\Visual Studio Project\WIP\Skate2D\Skate2D Controls Test\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\arvid.nilsson7\Documents\Visual Studio Project\WIP\Skate2D\Skate2D Controls Test\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\arvid.nilsson7\Documents\Visual Studio Project\WIP\Skate2D\Skate2D Controls Test\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\arvid.nilsson7\Documents\Visual Studio Project\WIP\Skate2D\Skate2D Controls Test\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\arvid.nilsson7\Documents\Visual Studio Project\WIP\Skate2D\Skate2D Controls Test\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\arvid.nilsson7\Documents\Visual Studio Project\WIP\Skate2D\Skate2D Controls Test\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+C:\Users\arvid.nilsson7\Documents\Visual Studio Project\WIP\Skate2D\Skate2D Controls Test\obj\x86\Debug\Skate2D Game.csprojResolveAssemblyReference.cache
+C:\Users\arvid.nilsson7\Documents\Visual Studio Project\WIP\Skate2D\Skate2D Controls Test\obj\x86\Debug\Skate2D Controls Test.exe
+C:\Users\arvid.nilsson7\Documents\Visual Studio Project\WIP\Skate2D\Skate2D Controls Test\obj\x86\Debug\Skate2D Controls Test.pdb
