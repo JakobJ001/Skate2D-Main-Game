@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Skate2D_Controls_Test
 {
-    //---Hela klassen är Jakobs Del
+    //---Nästab hela klassen är Jakobs Del
 
     //NOTES:
 
@@ -133,19 +133,23 @@ namespace Skate2D_Controls_Test
             if (Keyboard.GetState().IsKeyDown(Keys.W) && layer != 3 && lastButton != nowButton)
             {
                 layer += 1;
-                if (position.Y > 800 - texture.Height + 4 * 40)
-                {
-                    position.Y -= 800 - texture.Height + layer + 1 *40;
-                }
+                position.Y -= 40;
+
+                //if (position.Y > 800 - texture.Height + 4 * 40)
+                //{
+                //    position.Y -= 800 - texture.Height + layer + 1 *40;
+                //}
             }
 
             if (Keyboard.GetState().IsKeyDown(Keys.S) && layer != 0 && lastButton != nowButton)
             {
                 layer -= 1;
-                if (position.Y > 800 - texture.Height + 4 * 40)
-                {
-                    position.Y = 800 - texture.Height - layer * 40 ;
-                }
+                position.Y += 40;
+
+                //if (position.Y > 800 - texture.Height + 4 * 40)
+                //{
+                //    position.Y = 800 - texture.Height - layer * 40 ;
+                //}
             }
 
             //--- This is simply a key to return to rotation 0, but i didnt want it to just teleport into position so i used
@@ -188,10 +192,10 @@ namespace Skate2D_Controls_Test
                 
                 //--- This makes it so that if youre rotated a certain way, in where the player textures wheels wouldnt hit the ground when you land,
                 //-- you stop and basically crash. Gives a bit more risk to rotating in the air.
-                if (rotation < MathHelper.ToRadians(-90) || rotation > MathHelper.ToRadians(90)) 
+                if (rotation < MathHelper.ToRadians(-90) && velocity.X != 0 || rotation > MathHelper.ToRadians(90) && velocity.X != 0) 
                 {
-                    velocity.X = 0;
-                    rotation = 0;
+                    velocity.X *= 0.70F;
+
                 }
             }
 

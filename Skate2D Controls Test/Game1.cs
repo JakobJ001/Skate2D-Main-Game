@@ -13,7 +13,6 @@ namespace Skate2D_Controls_Test
 
         Camera camera;
 
-        //-----------------------------------------------
         Obstacles box;
 
         public static int ScreenHeight;
@@ -24,7 +23,6 @@ namespace Skate2D_Controls_Test
         public static Vector2 gravity;
 
         GraphicsDeviceManager graphics;
-        //-----------------------------------------------
         SpriteBatch spriteBatch;
 
         Texture2D backgroundSprite;

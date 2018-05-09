@@ -11,6 +11,8 @@ namespace Skate2D_Controls_Test
 {
     public class Obstacles
     {
+        //---Hela klassen är Jakobs Del
+
             public Texture2D boxTexture;
             public Vector2 position;
             
