@@ -19,14 +19,13 @@ namespace Skate2D_Controls_Test
 
 
 
-    public class Player
+    public class Player : BaseObjects
     {
-        public Texture2D texture;
         public Vector2 position, velocity, acceleration, friction, center;
         float rotation;
         KeyboardState nowButton, lastButton;
-        int layer;
-        int ground;
+
+        int playerGround;
 
         float accelerationfloat = 0.1F;
         float frictionfloat = 0;
@@ -35,7 +34,7 @@ namespace Skate2D_Controls_Test
         float restSpeed = 0;
 
         //Constructor, assigns the important variables to the player, like everything it needs to move/how it looks. Basically creates the player.
-        public Player(Texture2D texture)
+        public Player(Texture2D texture) :base(183)
         {
             this.texture = texture;
             position = new Vector2(50, 100);
@@ -46,6 +45,7 @@ namespace Skate2D_Controls_Test
             restSpeed = accelerationfloat;
 
             center = new Vector2(texture.Width / 2, texture.Height / 2);
+
         }
 
         public void Update()
@@ -180,15 +180,13 @@ namespace Skate2D_Controls_Test
                 rotation = MathHelper.ToRadians(180);
             }
 
+            playerGround = ground - layer * 40;
 
-            //--- This  simply creates the ground, so you dont fall forever
-            ground = 800 - texture.Height - layer * 40;
-
-            if (position.Y > ground && velocity.Y > 1)
+            if (position.Y > playerGround && velocity.Y > 1)
             {
                 velocity.Y *= -1;
                 velocity.Y /= 2;
-                position.Y = ground - 1;
+                position.Y = playerGround - 1;
                 
                 //--- This makes it so that if youre rotated a certain way, in where the player textures wheels wouldnt hit the ground when you land,
                 //-- you stop and basically crash. Gives a bit more risk to rotating in the air.

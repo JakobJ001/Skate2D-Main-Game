@@ -9,28 +9,35 @@ using System.Threading.Tasks;
 
 namespace Skate2D_Controls_Test
 {
-    public class Obstacles
+    public class Obstacles : BaseObjects
     {
         //---Hela klassen är Jakobs Del
+        public Vector2 position;
+        public int boxX;
+        
 
-            public Texture2D boxTexture;
-            public Vector2 position;
-            
-                    
-            public Obstacles(Texture2D boxTexture)
-            {
-                this.boxTexture = boxTexture;
-                position = new Vector2(500, 480);
+        public Obstacles(Texture2D texture, int layer, int boxX) : base(280)
+        {
+                this.texture = texture;
+                this.boxX = boxX;
+                this.layer = layer;
+                position = new Vector2(boxX, ground - layer * 40);
             }
-
+        public Rectangle Hitbox
+        {
+            get
+            {
+                return new Rectangle((int)position.X, (int)position.Y, texture.Width, texture.Height);
+            }
+        }
             public void Update()
             {
-
+            Console.WriteLine(position.Y);
             }
 
             public void Draw(SpriteBatch obstacleSpriteBatch)
             {
-                obstacleSpriteBatch.Draw(boxTexture,position,Color.White);
+                obstacleSpriteBatch.Draw(texture,position,Color.White);
             }
 
     }

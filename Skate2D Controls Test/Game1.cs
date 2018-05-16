@@ -27,6 +27,13 @@ namespace Skate2D_Controls_Test
 
         Texture2D backgroundSprite;
 
+
+        //------------------------------------------------------------------------------------------------------------------------
+
+         
+
+
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -36,7 +43,6 @@ namespace Skate2D_Controls_Test
 
         protected override void Initialize()
         {
-
 
             IsMouseVisible = true;
             graphics.PreferredBackBufferHeight = 800;
@@ -75,8 +81,9 @@ namespace Skate2D_Controls_Test
             player = new Player(playerSprite);
 
 
-            //-----------------------------------------------------------------------------------------
-            box = new Obstacles(boxTexture);
+            //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+            box = new Obstacles(boxTexture, 1, 200);
 
         }
 
@@ -99,6 +106,8 @@ namespace Skate2D_Controls_Test
             //--- Uses the Player objects update method, which checks for button presses and does what they are bound to, like move forward and jump --Jakobs Del
             player.Update();
 
+            box.Update();
+
             base.Update(gameTime);
         }
 
@@ -116,8 +125,24 @@ namespace Skate2D_Controls_Test
             }
             player.Draw(spriteBatch);
 
-            //------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+            //------------------------------------------------------------------------------------------------------------------------
             box.Draw(spriteBatch);
+
+
+
+
+
+
+
 
                 spriteBatch.End();
 
